@@ -52,6 +52,8 @@ livrosRoutes.put("/livros/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const dados = req.body;
+        console.log(dados)
+
         const livro = await Livro.findByPk(id);
 
         if(livro) {
